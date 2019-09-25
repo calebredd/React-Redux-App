@@ -16,7 +16,7 @@ function reducer(state = initialState, action) {
     case FETCH_JOKE_SUCCESS:
       return {
         ...state,
-        jokes: [...state.jokes, action.payload],
+        jokes: [action.payload, ...state.jokes],
         isFetching: false,
         error: ""
       };

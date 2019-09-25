@@ -9,6 +9,7 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <h1>Daily Dad Jokes Generator!</h1>
+        <h2>In honor of my friend: The Legendary Dad, Pal-dilla</h2>
         {/* <h1>
           Now is your chance to make a REDUX app using an API for your
           initialState/store
@@ -27,9 +28,9 @@ function App(props) {
         </a>
       </p> */}
       <button onClick={() => props.getJoke()}>Generate a new Dad Joke!</button>
-      <div>
+      <div className="jokes">
         {props.state.jokes.map(joke => (
-          <p>{joke}</p>
+          <p className="joke">{joke}</p>
         ))}
       </div>
     </div>
